@@ -134,11 +134,17 @@
 
   <!-- SETTINGS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
   
+
   <section name="IMU" prefix="IMU_">
+    <define name="BODY_TO_IMU_PHI"   value="-90" unit="deg"/>
+      <define name="BODY_TO_IMU_THETA" value="-225" unit="deg"/>
+    <define name="BODY_TO_IMU_PSI" value="90" unit="deg"/>
+
+<!--  <section name="IMU" prefix="IMU_">
     <define name="BODY_TO_IMU_PHI"   value="-90." unit="deg"/>
       <define name="BODY_TO_IMU_THETA" value="-45" unit="deg"/>
-    <define name="BODY_TO_IMU_PSI" value="0" unit="deg"/>
-  
+    <define name="BODY_TO_IMU_PSI" value="0" unit="deg"/> -->
+
     <!-- MAGNETO CALIBRATION DELFT - calibration still needs to be done !!! -->
     <define name="MAG_X_NEUTRAL" value="10"/>
     <define name="MAG_Y_NEUTRAL" value="238"/>
@@ -209,15 +215,13 @@
     <define name="PHI_DGAIN" value="750"/>
     <define name="PHI_IGAIN" value="0"/>
     
-    <define name="THETA_PGAIN" value="7600"/> <!-- decrease this one probably -->
-    <define name="THETA_DGAIN" value="1000"/>
+    <define name="THETA_PGAIN" value="20000"/>  <!-- upped -->
+    <define name="THETA_DGAIN" value="100"/>   <!-- lowered to remove feedback loop -->
     <define name="THETA_IGAIN" value="0"/>
     
-    <define name="PSI_PGAIN" value="2000"/> <!-- decrease this one probably -->
+    <define name="PSI_PGAIN" value="4000"/>  <!-- upped -->
     <define name="PSI_DGAIN" value="0"/>
     <define name="PSI_IGAIN" value="0"/>
-    <!--define name="PSI_DGAIN" value="800"/-->
-    <!--define name="PSI_IGAIN" value="200"/-->
     
     <!-- feedforward -->
     <define name="PHI_DDGAIN" value="0"/>
